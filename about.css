@@ -1,0 +1,228 @@
+/* General Styles */
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #222;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color:yellow;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: wheat;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+nav ul li a.active {
+    background-color:yellow;
+    color: black;
+}
+
+/* Hero Section */
+.about-hero {
+    text-align: center;
+    padding: 80px;
+    background: url('hero-bg.jpg') no-repeat center;
+    background-size: cover;
+}
+
+/* About Content */
+.about-content {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.about-image img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.about-text {
+    margin-left: 50px;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    background: yellow;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 80%;
+    background: #333;
+    height: 5px;
+    margin: 10px auto;
+    position: relative;
+}
+
+.progress {
+    height: 5px;
+    background: yellow;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    text-align: center;
+}
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    padding: 50px;
+    background: url('cta-bg.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background: yellow;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    padding: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: yellow;
+}
+
+.footer-contact i {
+    color: yellow;
+}
+
+.social-icons i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: yellow;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        height: auto;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 80%;
+    }
+
+    .about, .portfolio, .contact-info, .gallery {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .about-text, .portfolio h2, .contact-info {
+        text-align: center;
+    }
+
+    .portfolio-grid, .gallery .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid, .gallery .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .filters button {
+        width: 100%;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .about-text h2, .portfolio h2 {
+        font-size: 24px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+    }
+}
